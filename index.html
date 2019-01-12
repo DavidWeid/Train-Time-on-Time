@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html>
+<html lang="en-us">
   <head>
     <meta charset="utf-8" />
     <title>Train Scheduler System</title>
@@ -23,6 +23,92 @@
     />
   </head>
   <body>
+    <div class="jumbotron jumbotron-fluid mb-5">
+      <div class="container">
+        <h1 class="display-4">Train Time</h1>
+        <p class="lead">Find out when your train is coming!</p>
+      </div>
+    </div>
+
+    <!-- <div class="card bg-dark text-white">
+        <img src="assets/images/train2.jpg" class="card-img img-fluid" alt="red train" />
+        <div class="card-img-overlay">
+            <h3 class="card-title">Train Time</h5>
+            <p class="card-text">Find out when your train is coming!</p>
+        </div>
+    </div>     -->
+
+    <!-- <div id="trainSlides" class="carousel slide" data-ride="carousel" data-interval="1000">
+        <div class="carousel-inner">
+            <div class="carousel-item active">
+                <img src="assets/images/train.jpg" class="image-height img-fluid d-block w-100" alt="">
+            </div>
+            <div class="carousel-item">
+                <img src="assets/images/red-train.jpg" class="image-height img-fluid d-block w-100" alt="">
+            </div>
+            <div class="carousel-item">
+                <img src="assets/images/gold-train.jpg" class="image-height img-fluid d-block w-100" alt="">
+            </div>
+        </div>
+    </div> -->
+
+    <div class="container">
+
+      <div class="row mb-5">
+
+        <div class="card col-12" id="train-card">
+          <h5 class="card-header">Current Train Schedule</h5>
+          <div class="row text-center">
+            <div class="col-1"></div>
+            <div class="col-2">Train Name</div>
+            <div class="col-2">Destination</div>
+            <div class="col-2">Frequency (min)</div>
+            <div class="col-2">Next Arrival</div>
+            <div class="col-2">Minutes Away</div>
+            <div class="col-1"></div>
+          </div>
+        </div>
+        <!--CARD END-->
+
+      </div>
+      <!--ROW END-->
+
+      <div class="row">
+
+        <div class="card col-12" id="add-train-card">
+          <h5 class="card-header">Add Train</h5>
+
+          <form>
+
+            <div class="form-group">
+              <label for="train-name">Train Name</label>
+              <input type="text" class="form-control" id="name-input" autofocus required />
+            </div>
+
+            <div class="form-group">
+              <label for="destination">Destination</label>
+              <input type="text" class="form-control" id="destination-input" required />
+            </div>
+
+            <div class="form-group">
+              <label for="first-time">First Train Time (military time)</label>
+              <input type="time" class="form-control" id="firstTime-input" placeholder="HH:mm" required />
+            </div>
+
+            <div class="form-group">
+              <label for="frequency">Frequency (min)</label>
+              <input type="number" class="form-control" id="frequency-input" required />
+            </div>
+
+            <button type="submit" class="btn btn-secondary mb-2" id="submit-btn">Submit</button>
+
+          </form>
+
+        </div>
+      </div>
+    </div>
+    <!--CONTAINER END-->
+
     <!--MOMENT JS-->
     <script src="https://cdn.jsdelivr.net/npm/moment@2.23.0/moment.min.js"></script>
     <!--FIREBASE JS-->
