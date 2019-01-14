@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+
+<html lang="en-us">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Moment JS Exercises</title>
+  </head>
+
+  <body>
+    <!-- jQuery -->
+    <script src="https://code.jquery.com/jquery.js"></script>
+
+    <!-- Link to Moment.js should go here -->
+    <script src="https://cdn.jsdelivr.net/momentjs/2.12.0/moment.min.js"></script>
+
+    <!-- Script -->
+    <script>
+      var firstTrainTime = "14:00";
+      var frequency = "30";
+
+      console.log(
+        "First Time: " + firstTrainTime + " | " + "Frequency: " + frequency
+      );
+
+      var firstTrainFormat = moment(firstTrainTime, "HH:mm");
+      var firstHour = moment(firstTrainFormat).format("HH");
+      console.log(firstHour);
+      var firstMinute = moment(firstTrainFormat).format("m");
+      console.log(firstMinute);
+      var todayFirstTrain = moment().set({'hour': firstHour, 'minute' : firstMinute});
+      console.log(todayFirstTrain);
+      var todayFirstTrainUnix = parseInt(todayFirstTrain.format('X'));
+      console.log(todayFirstTrainUnix);
+
+      var nowUnix = parseInt(moment().format("X"));
+      console.log(nowUnix);
+
+      var timeOfLastTrain = 0;
+      for (timeOfLastTrain = todayFirstTrainUnix; timeOfLastTrain < nowUnix; timeOfLastTrain += 1800);
+      console.log(timeOfLastTrain);
+      console.log(moment.unix(timeOfLastTrain).format("HH:mm"));
+      console.log((timeOfLastTrain - nowUnix) / 60);
+
+    </script>
+  </body>
+</html>

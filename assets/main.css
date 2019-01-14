@@ -2,3 +2,46 @@
     height: 300px;
     overflow: hidden;
 }
+
+.color-shades {
+    color: rgb(252, 225, 0);
+    color: rgb(61, 54, 0);
+    color: rgb(226, 202, 0);
+    color: rgb(124, 111, 0);
+    color: rgb(188, 168, 0)
+}
+
+.color-compound {
+    color: rgb(63, 76, 252);
+    color: rgb(20, 80, 201);
+    color: rgb(121, 150, 60);
+    color: rgb(142, 201, 20);
+}
+
+.bg-pika {
+    background-color: rgb(252, 225, 0);
+}
+
+.bg-blue {
+    background-color: rgb(63, 76, 252);
+}
+
+.text-blue {
+    color: rgb(63, 76, 252);
+}
+
+.text-brown {
+    color: rgb(61, 54, 0);
+}
+
+.text-pika {
+    color: rgb(252, 225, 0);
+}
+
+.low-opacity {
+    opacity: .5;
+}
+
+.card-bg {
+    background-color: rgb(245, 245, 245);
+}

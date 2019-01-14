@@ -23,10 +23,27 @@
     />
   </head>
   <body>
-    <div class="jumbotron jumbotron-fluid mb-5">
-      <div class="container">
-        <h1 class="display-4">Train Time</h1>
-        <p class="lead">Find out when your train is coming!</p>
+    <div
+      class="jumbotron jumbotron-fluid mb-5 bg-pika text-pika font-weight-bolder"
+    >
+      <div class="container-fluid bg-blue">
+        <div class="row py-3 align-middle">
+          <div class="col-1"></div>
+          <div class="col-8">
+            <h1 class="display-4">Train Time</h1>
+            <p class="lead">Find out when your train is coming!</p>
+          </div>
+          <div class="col-2">
+            <img
+              src="assets/images/pikachoo-choo.jpg"
+              width="218px"
+              height="143px"
+              class="rounded"
+              alt=""
+            />
+          <div class="col-1"></div>
+          </div>
+        </div>
       </div>
     </div>
 
@@ -53,57 +70,118 @@
     </div> -->
 
     <div class="container">
-
       <div class="row mb-5">
-
-        <div class="card col-12" id="train-card">
-          <h5 class="card-header">Current Train Schedule</h5>
-          <div class="row text-center">
+        <div class="card col-12 px-0 pb-3 card-bg" id="train-card">
+          <h5 class="card-header bg-pika text-brown">Current Train Schedule</h5>
+          <div class="row text-center my-3 font-weight-bolder text-brown">
             <div class="col-1"></div>
-            <div class="col-2">Train Name</div>
-            <div class="col-2">Destination</div>
-            <div class="col-2">Frequency (min)</div>
-            <div class="col-2">Next Arrival</div>
-            <div class="col-2">Minutes Away</div>
+            <div class="col-2 border-bottom border-dark">Train Name</div>
+            <div class="col-2 border-bottom border-dark">Destination</div>
+            <div class="col-2 border-bottom border-dark">Frequency (min)</div>
+            <div class="col-2 border-bottom border-dark">Next Arrival</div>
+            <div class="col-2 border-bottom border-dark">Minutes Away</div>
             <div class="col-1"></div>
           </div>
         </div>
         <!--CARD END-->
-
       </div>
       <!--ROW END-->
 
       <div class="row">
+        <div class="card col-12 px-0 mb-5 pb-3 card-bg" id="add-train-card">
+          <h5 class="card-header bg-pika text-brown">Add Train</h5>
 
-        <div class="card col-12" id="add-train-card">
-          <h5 class="card-header">Add Train</h5>
-
-          <form>
-
+          <form class="px-4 text-blue">
             <div class="form-group">
-              <label for="train-name">Train Name</label>
-              <input type="text" class="form-control" id="name-input" autofocus required />
+              <label for="train-name" class="mt-3">Train Name</label>
+              <input
+                type="text"
+                class="form-control"
+                id="name-input"
+                autofocus
+                required
+              />
             </div>
 
             <div class="form-group">
               <label for="destination">Destination</label>
-              <input type="text" class="form-control" id="destination-input" required />
+              <input
+                type="text"
+                class="form-control"
+                id="destination-input"
+                required
+              />
             </div>
 
             <div class="form-group">
               <label for="first-time">First Train Time (military time)</label>
-              <input type="time" class="form-control" id="firstTime-input" placeholder="HH:mm" required />
+              <input
+                type="text"
+                class="form-control"
+                id="firstTime-input"
+                placeholder="HH:mm"
+                required
+              />
             </div>
 
             <div class="form-group">
               <label for="frequency">Frequency (min)</label>
-              <input type="number" class="form-control" id="frequency-input" required />
+              <input
+                type="number"
+                class="form-control"
+                id="frequency-input"
+                required
+              />
             </div>
 
-            <button type="submit" class="btn btn-secondary mb-2" id="submit-btn">Submit</button>
+            <button
+              type="submit"
+              class="btn bg-pika text-blue"
+              id="submit-btn"
+              data-target="#submitSuccess"
+            >
+              Submit
+            </button>
 
+            <div
+              class="modal fade"
+              id="submitSuccess"
+              tabindex="-1"
+              role="dialog"
+              aria-labelledby="submitSuccesLabel"
+              aria-hidden="true"
+            >
+              <div class="modal-dialog" role="document">
+                <div class="modal-content">
+                  <div class="modal-header">
+                    <h5 class="modal-title" id="submitSuccessLabel">
+                      Thank You!
+                    </h5>
+                    <button
+                      type="button"
+                      class="close"
+                      data-dismiss="modal"
+                      aria-label="Close"
+                    >
+                      <span aria-hidden="true">&times;</span>
+                    </button>
+                  </div>
+                  <div class="modal-body">
+                    Your train was successfully added!
+                  </div>
+                  <div class="modal-footer">
+                    <button
+                      type="button"
+                      class="btn bg-pika text-blue"
+                      data-dismiss="modal"
+                    >
+                      Close
+                    </button>
+                  </div>
+                </div>
+              </div>
+            </div>
           </form>
-
         </div>
       </div>
     </div>
