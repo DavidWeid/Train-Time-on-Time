@@ -12,11 +12,6 @@ firebase.initializeApp(config);
 
 var database = firebase.database().ref("/trainInfo");
 
-// Carousel speed option
-// $(".carousel").carousel({
-//   interval: 1000
-// });
-
 // When user clicks "Submit"
 $("#submit-btn").on("click", function(event) {
   event.preventDefault();
