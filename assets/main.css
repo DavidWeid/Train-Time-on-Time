@@ -19,23 +19,28 @@
 }
 
 .bg-pika {
-  background-color: rgb(252, 225, 0);
+  /* background-color: rgb(252, 225, 0); */
+  background-color: #f1c40f;
 }
 
 .bg-blue {
-  background-color: rgb(63, 76, 252);
+  /* background-color: rgb(63, 76, 252); */
+  background-color: #2980b9;
 }
 
 .text-blue {
-  color: rgb(63, 76, 252);
+  /* color: rgb(63, 76, 252); */
+  color: #2980b9;
 }
 
 .text-brown {
-  color: rgb(61, 54, 0);
+  /* color: rgb(61, 54, 0); */
+  color: #c0392b;
 }
 
 .text-pika {
-  color: rgb(252, 225, 0);
+  /* color: rgb(252, 225, 0); */
+  color: #f1c40f;
 }
 
 .low-opacity {
@@ -44,4 +49,8 @@
 
 .card-bg {
   background-color: rgb(245, 245, 245);
+}
+
+.text-white {
+  color: #ecf0f1;
 }
