@@ -1,3 +1,7 @@
+.full-height {
+  height: 100%;
+}
+
 .image-height {
   height: 300px;
   overflow: hidden;
